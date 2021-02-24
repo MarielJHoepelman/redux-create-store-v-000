@@ -5,12 +5,15 @@ function createStore() {
     state = reducer(state, action);
     render();
   };
-  
+
   function getState() {
    return state;
  }
 
-  return { dispatch };
+ return {
+dispatch,
+getState
+};
 };
 
 function reducer(state = { count: 0 }, action) {
