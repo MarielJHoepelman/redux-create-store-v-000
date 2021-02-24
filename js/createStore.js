@@ -6,6 +6,9 @@ function createStore() {
     render();
   };
   
+  function getState() {
+   return state;
+ }
 
   return { dispatch };
 };
