@@ -1,5 +1,11 @@
 function createStore() {
   let state;
+  // state is now accessible to dispatch
+
+  function dispatch(action) {
+    state = reducer(state, action);
+    render();
+  }
 }
 function reducer(state = { count: 0 }, action) {
   switch (action.type) {
