@@ -1,14 +1,14 @@
-function createStore() {
+function createStore(reducer) {
   let state;
 
   function dispatch(action) {
     state = reducer(state, action);
     render();
-  };
+  }
 
   function getState() {
-   return state;
- }
+    return state;
+  };
 
   return {
     dispatch,
